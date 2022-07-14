@@ -11,9 +11,7 @@ interface Props {
 }
 
 export default function Chronometer({ selecionado, finalizarTarefa }: Props) {
-  const [tempo, setTempo] = useState<number>(
-    tempoParaSegundos(String(selecionado?.tempo))
-  );
+  const [tempo, setTempo] = useState<number>();
 
   useEffect(() => {
     if (selecionado?.tempo) {
